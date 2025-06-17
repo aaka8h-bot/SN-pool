@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN Pool | Premium Swimming Pool Maintenance & Service</title>
+    <meta name="description" content="SN Pool provides premium swimming pool maintenance and services for luxury hotels and resorts. Trusted by JW Marriott and 5-star establishments worldwide.">
+    <meta name="keywords" content="pool maintenance, pool service, luxury hotels, swimming pool, pool cleaning, pool repair">
+    <meta name="author" content="SN Pool">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="SN Pool | Premium Swimming Pool Maintenance & Service">
+    <meta property="og:description" content="Trusted by 5-Star Hotels. Powered by Experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.snpool.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏊</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004d99;
+            --secondary: #00c2cb;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #00a9b1;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar.scrolled {
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 80px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-logo {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.2s ease-out;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeInUp 1s ease-out 0.9s forwards;
+            opacity: 0;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+        }
+        
+        .counters {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .counter-item {
+            text-align: center;
+        }
+        
+        .counter-number {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .counter-text {
+            font-size: 16px;
+            color: var(--gray);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+        }
+        
+        .service-icon {
+            position: absolute;
+            top: -25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 5px 15px rgba(0, 194, 203, 0.3);
+        }
+        
+        /* Projects Section */
+        .projects {
+            background-color: var(--light);
+        }
+        
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            margin: 5px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .project-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow);
+            height: 300px;
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 102, 204, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .project-item:hover .project-img {
+            transform: scale(1.05);
+        }
+        
+        .project-overlay h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-slide {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            margin: 20px;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .client-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 3px solid var(--secondary);
+        }
+        
+        .client-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .client-details h4 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .client-details p {
+            color: var(--secondary);
+            font-style: italic;
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before, .testimonial-text::after {
+            content: '"';
+            font-size: 50px;
+            color: var(--secondary);
+            opacity: 0.2;
+            position: absolute;
+        }
+        
+        .testimonial-text::before {
+            top: -20px;
+            left: -20px;
+        }
+        
+        .testimonial-text::after {
+            bottom: -40px;
+            right: -20px;
+        }
+        
+        /* Download Section */
+        .download {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .download .section-title h2,
+        .download .section-title p {
+            color: white;
+        }
+        
+        .download .section-title::after {
+            background: var(--secondary);
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .download-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .download-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+        }
+        
+        .download-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .download-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .download-card p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 194, 203, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .animate.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 50px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-logo {
+                font-size: 60px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .counter-number {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-text">SN<span>Pool</span></div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#download">Downloads</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-swimming-pool-with-turquoise-water-4260-large.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <i class="fas fa-swimming-pool"></i>
+                </div>
+                <h1>Premium Pool Maintenance & Service</h1>
+                <p>Trusted by 5-Star Hotels. Powered by Experience.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+                    <a href="#download" class="btn btn-outline">Download Brochure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>About SN Pool</h2>
+                <p>With over 15 years of excellence in pool maintenance, we've become the trusted partner for luxury hospitality brands worldwide.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-img animate">
+                    <img src="https://images.unsplash.com/photo-1567602901358-5ba00815eb15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="SN Pool Professional Team">
+                </div>
+                <div class="about-text animate">
+                    <h3>Our Journey to Excellence</h3>
+                    <p>Founded in 2008, SN Pool started with a simple mission: to provide unparalleled swimming pool maintenance services to luxury establishments. What began as a small team of passionate pool technicians has grown into an industry leader serving prestigious clients worldwide.</p>
+                    <p>Our commitment to quality, attention to detail, and innovative solutions has made us the preferred partner for luxury hotels and resorts who demand perfection in every aspect of their property.</p>
+                    
+                    <div class="counters">
+                        <div class="counter-item">
+                            <div class="counter-number" data-count="15">0</div>
+                            <div class="counter-text">Years of Experience</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" data-count="1200">0</div>
+                            <div class="counter-text">Pools Maintained</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" data-count="250">0</div>
+                            <div class="counter-text">Clients Served</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Our Premium Services</h2>
+                <p>Comprehensive solutions tailored to the unique needs of luxury hospitality establishments.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1589476993333-6702f2c3ebf7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="AMC Contracts">
+                    </div>
+                    <div class="service-content">
+                        <h3>AMC Contracts</h3>
+                        <p>Comprehensive Annual Maintenance Contracts tailored for hotel chains and resorts with 24/7 support and priority service.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-trowel"></i>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New Pool Construction">
+                    </div>
+                    <div class="service-content">
+                        <h3>New Pool Construction</h3>
+                        <p>Design and build stunning infinity pools, lap pools, and luxury resort pools that become the centerpiece of your property.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1560004206-52d4f8fdecb2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Deep Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3>Deep Cleaning & Chemical Balancing</h3>
+                        <p>Professional cleaning services and precise chemical management to ensure crystal clear, hygienic water at all times.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1598890777030-0d5e2f57dafc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Equipment Repair">
+                    </div>
+                    <div class="service-content">
+                        <h3>Equipment Repair & Maintenance</h3>
+                        <p>Expert repair and maintenance of pumps, filters, heaters, and automation systems from all major brands.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1567602901358-5ba00815eb15?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Emergency Maintenance">
+                    </div>
+                    <div class="service-content">
+                        <h3>Emergency Maintenance</h3>
+                        <p>24/7 rapid response for critical pool issues to minimize downtime and guest inconvenience.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1627483298235-f305575a6851?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Water Testing">
+                    </div>
+                    <div class="service-content">
+                        <h3>Water Quality Management</h3>
+                        <p>Advanced water testing and treatment solutions to maintain perfect chemical balance and clarity.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Our Premium Projects</h2>
+                <p>Explore our portfolio of luxury hotel and resort projects we're proud to maintain.</p>
+            </div>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="hotel">Hotels</button>
+                <button class="filter-btn" data-filter="resort">Resorts</button>
+                <button class="filter-btn" data-filter="villa">Private Villas</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-item animate" data-category="hotel">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Luxury Hotel Pool" class="project-img">
+                    <div class="project-overlay">
+                        <h3>JW Marriott Resort</h3>
+                        <p>Infinity pool maintenance with automated chemical dosing system</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-item animate" data-category="resort">
+                    <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beach Resort Pool" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Paradise Beach Resort</h3>
+                        <p>Complete renovation of main resort pool and swim-up bar</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-item animate" data-category="villa">
+                    <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Private Villa Pool" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Oceanview Luxury Villa</h3>
+                        <p>Custom pool construction with integrated spa and lighting</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-item animate" data-category="hotel">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rooftop Pool" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Grand Metropolitan Hotel</h3>
+                        <p>Rooftop pool maintenance with panoramic city views</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-item animate" data-category="resort">
+                    <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Spa Resort Pool" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Tranquility Spa Resort</h3>
+                        <p>Thermal pool complex with specialized mineral water systems</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-item animate" data-category="hotel">
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Indoor Hotel Pool" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Prestige City Hotel</h3>
+                        <p>Year-round maintenance of climate-controlled indoor pool</p>
+                        <a href="#" class="btn btn-outline">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Download Center</h2>
+                <p>Access our company resources, documentation, and tender information.</p>
+            </div>
+            
+            <div class="download-grid">
+                <div class="download-card animate">
+                    <div class="download-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>AMC Contracts</h3>
+                    <p>Download our standard Annual Maintenance Contract templates and service agreements.</p>
+                    <a href="#" class="btn btn-outline">Download PDF</a>
+                </div>
+                
+                <div class="download-card animate">
+                    <div class="download-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Company Profile</h3>
+                    <p>Our comprehensive company profile detailing services, expertise, and client portfolio.</p>
+                    <a href="#" class="btn btn-outline">Download PDF</a>
+                </div>
+                
+                <div class="download-card animate">
+                    <div class="download-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Licenses & Certifications</h3>
+                    <p>ISO certifications, business licenses, and industry accreditations.</p>
+                    <a href="#" class="btn btn-outline">View Documents</a>
+                </div>
+                
+                <div class="download-card animate">
+                    <div class="download-icon">
+                        <i class="fas fa-brochure"></i>
+                    </div>
+                    <h3>Brochures & Tenders</h3>
+                    <p>Marketing materials and current tender opportunities for hospitality partners.</p>
+                    <a href="#" class="btn btn-outline">Download</a>
+                </div>
+            </div>
+            
+            <div class="upload-section animate">
+                <h3 style="color: white; margin-bottom: 20px;">Submit Tender Documents</h3>
+                <form class="upload-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Company Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit Documents</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Client Testimonials</h2>
+                <p>Hear from our prestigious hospitality partners about their experience with SN Pool.</p>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-slide animate">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="John Smith">
+                        </div>
+                        <div class="client-details">
+                            <h4>John Smith</h4>
+                            <p>Facilities Manager, JW Marriott</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-text">
+                        <p>"SN Pool has been maintaining our luxury resort pools for over 8 years. Their attention to detail and commitment to excellence is unmatched in the industry. Our guests consistently compliment the pristine condition of our pools, which is a testament to SN Pool's exceptional service."</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide animate">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sarah Johnson">
+                        </div>
+                        <div class="client-details">
+                            <h4>Sarah Johnson</h4>
+                            <p>Operations Director, Grand Resort</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-text">
+                        <p>"We switched to SN Pool three years ago and have seen a remarkable improvement in pool water quality and equipment reliability. Their 24/7 emergency service has saved us on multiple occasions during peak season. Their team truly understands the demands of luxury hospitality."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-logos animate" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 50px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/JW_Marriott_logo.svg/320px-JW_Marriott_logo.svg.png" alt="JW Marriott" style="height: 50px; filter: grayscale(100%); opacity: 0.7;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Hilton_logo.svg/320px-Hilton_logo.svg.png" alt="Hilton" style="height: 50px; filter: grayscale(100%); opacity: 0.7;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Hyatt_Logo.svg/320px-Hyatt_Logo.svg.png" alt="Hyatt" style="height: 50px; filter: grayscale(100%); opacity: 0.7;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Sheraton_logo.svg/320px-Sheraton_logo.svg.png" alt="Sheraton" style="height: 50px; filter: grayscale(100%); opacity: 0.7;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ritz-Carlton_logo.svg/320px-Ritz-Carlton_logo.svg.png" alt="Ritz-Carlton" style="height: 50px; filter: grayscale(100%); opacity: 0.7;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title animate">
+                <h2>Contact Us</h2>
+                <p>Reach out to our team for premium pool maintenance solutions.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Our Location</h3>
+                            <p>123 Luxury Avenue, Hospitality District<br>Miami, FL 33139, USA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone & WhatsApp</h3>
+                            <p>+1 (305) 123-4567<br>+1 (305) 765-4321 (WhatsApp)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <p>info@snpool.com<br>support@snpool.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item animate">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Emergency Support: 24/7</p>
+                        </div>
+                    </div>
+                    
+                    <div class="animate" style="margin-top: 30px;">
+                        <a href="https://wa.me/13057654321" class="btn btn-secondary" style="width: 100%; text-align: center;">
+                            <i class="fab fa-whatsapp"></i> Message Us on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form animate">
+                    <h3 style="margin-bottom: 20px;">Send an Inquiry</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" disabled selected>Service Interested In</option>
+                                <option>AMC Contracts</option>
+                                <option>New Pool Construction</option>
+                                <option>Deep Cleaning & Chemical Balancing</option>
+                                <option>Equipment Repair</option>
+                                <option>Emergency Maintenance</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control">
+                            <small>Upload any relevant documents (optional)</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container animate">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.53925916665!2d-80.29949920266738!3d25.782390733064336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2sin!4v1653039297913!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SN Pool</h3>
+                    <p>Premium swimming pool maintenance and service solutions for luxury hotels and resorts worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">AMC Contracts</a></li>
+                        <li><a href="#">New Pool Construction</a></li>
+                        <li><a href="#">Deep Cleaning & Chemical Balancing</a></li>
+                        <li><a href="#">Equipment Repair</a></li>
+                        <li><a href="#">Emergency Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Ave, Miami, FL</li>
+                        <li><i class="fas fa-phone"></i> +1 (305) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@snpool.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (305) 765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 SN Pool. All Rights Reserved. | Premium Swimming Pool Maintenance & Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+        
+        // Initialize animations on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter-number');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-count');
+                    const count = +counter.innerText;
+                    
+                    const increment = target / speed;
+                    
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCount();
+            });
+        }
+        
+        // Initialize counter when in view
+        const counterSection = document.querySelector('.about');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(counterSection);
+        
+        // Project filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Form validation
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                let valid = true;
+                const inputs = form.querySelectorAll('input, textarea, select');
+                
+                inputs.forEach(input => {
+                    if (input.hasAttribute('required') && !input.value.trim()) {
+                        valid = false;
+                        input.style.borderColor = 'red';
+                    } else {
+                        input.style.borderColor = '#ddd';
+                    }
+                });
+                
+                if (!valid) {
+                    e.preventDefault();
+                    alert('Please fill in all required fields.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
